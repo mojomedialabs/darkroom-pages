@@ -1,0 +1,111 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script>
+jQuery(document).ready(function() {
+	jQuery("#tabs").tabs().tabs("rotate", 3000);
+
+	jQuery(".rotatestopperitem").bind("click", function() {
+		jQuery("#featured").tabs("rotate", 0, false);
+	});
+});
+</script>
+<style type="text/css">
+#wrapper-inner {
+	background: #000000 url(wp-content/themes/darkroom/images/home-gradient-background.png);
+}
+#content {
+	padding: 0;
+}
+#tabs .ui-tabs-nav {
+	background: transparent;
+	position: relative;
+	left: 175px;
+	list-style: none !important;
+	top: -47px;
+	z-index: 9;
+}
+#tabs .ui-tabs-nav li {
+	float: left;
+}
+#tabs .ui-tabs-nav li a {
+	text-decoration: none;
+}
+#tabs .ui-tabs-nav li.ui-state-default {
+	background: url('wp-content/themes/darkroom/images/home-slideshow-item.png') no-repeat center top;
+	border: 0;
+	font-size: 12px;
+	height: 59px;
+	width: 113px;
+}
+#tabs .ui-tabs-nav li.ui-state-default a {
+	color: #000000;
+	padding-left: 30px;
+}
+#tabs .ui-tabs-nav li.ui-tabs-selected {
+	background: url('wp-content/themes/darkroom/images/home-slideshow-item-current.png') no-repeat center top;
+	border: 0;
+	padding-top: 10px;
+}
+#tabs .ui-tabs-nav li.ui-tabs-selected a {
+	color: #ffffff;
+}
+#tabs .ui-tabs-panel {
+	height: 309px;
+	padding: 10px 420px 116px 80px !important;
+}
+#tabs .ui-tabs-panel h2 {
+	font-size: 34px;
+	line-height: 42px;
+}
+#tabs .ui-tabs-panel p {
+	font-size: 22px;
+	line-height: 26px;
+	padding-left: 10px 0 0 20px;
+}
+#better {
+	background: url("wp-content/uploads/2011/09/bubble-better.png") no-repeat scroll 20px 0;
+}
+#versatile {
+	background: url(wp-content/uploads/2011/09/bubble-versatile.png) no-repeat scroll 20px 0;
+}
+#workflow {
+	background: url(wp-content/uploads/2011/09/bubble-workflow.png) no-repeat scroll 20px 0;
+}
+#profitable {
+	background: url(wp-content/uploads/2011/09/bubble-profitable.png) no-repeat scroll 20px 0;
+}
+#easy {
+	background: url(wp-content/uploads/2011/09/bubble-easy.png) no-repeat scroll 20px 0;
+}
+.ui-tabs-hide {
+	display: none !important;
+}
+</style>
+<div id="tabs">
+	<div id="better" class="ui-tabs-hide">
+		<h2>Your Talent,<br />Our Technology.</h2>
+		<p>As the only true end-to-end solution for professional photographers, Darkroom has set the industry standard since 1994. With continual upgrades and enhancements to ensure we are always in step with the leading edge of photographic and printing equipment, Darkroom remains the single best option for those who make their living taking pictures.</p>
+	</div>
+	<div id="versatile" class="ui-tabs-hide">
+		<h2>Yes, Darkroom can do that!</h2>
+		<p>Like the proverbial Swiss Army Knife, no other single software option provides the complete package of features and benefits. Enhance, organize and manage with ease. Once you take the picture, Darkroom can literally take you the rest of the way.</p>
+	</div>
+	<div id="workflow" class="ui-tabs-hide">
+		<h2>Any and every output<br />option you can imagine.</h2>
+		<p>Taking the picture is just the beginning of the process; getting it ready for sale is where Darkroom really differentiates from other photographic software. Darkroom is one click to package printing and makes even the most complex proof sheets easy to manage.</p>
+	</div>
+	<div id="profitable" class="ui-tabs-hide">
+		<h2>All you need from<br />click to collect.</h2>
+		<p>Hands free shoot to print simplicity, great for events large and small. Time is money and Darkroom will help you get images ready for sale quicker, while memories of the event are still fresh in the minds of customers.</p>
+	</div>
+	<div id="easy" class="ui-tabs-hide">
+		<h2>So powerful it’s easy.</h2>
+		<p>Programmed and user-tested to make sure it is easy to learn and easy to use. We hear it from seasoned pros and first timers, Darkroom is a pleasure to work with from day one.</p>
+	</div>
+	<ul>
+		<li><a href="#better">&nbsp;&nbsp;&nbsp;Better</a></li>
+		<li><a href="#versatile">Versatile</a></li>
+		<li><a href="#workflow">&nbsp;Workflow</a></li>
+		<li><a href="#profitable">Profitable</a></li>
+		<li><a href="#easy">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Easy</a></li>
+	</ul>
+</div>
