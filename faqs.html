@@ -1,13 +1,22 @@
-<script type="text/javascript">
+<script>
 jQuery(document).ready(function() {
-	jQuery(".question").click(function() {
-		jQuery(this).siblings().slideToggle();
+	jQuery(".question").click(function(event) {
+		event.preventDefault();
 
-		return false;
+		jQuery(this).siblings().slideToggle();
 	});
 });
 </script>
 <style type="text/css">
+#faqs-icon {
+	float: left;
+	text-align: center;
+	width: 150px;
+}
+#faqs {
+	float: left;
+	width: 690px;
+}
 .question {
 	cursor: pointer;
 }
@@ -18,208 +27,212 @@ jQuery(document).ready(function() {
 	list-style-image: url(wp-content/themes/darkroom/images/list-bullet.png) !important;
 }
 </style>
-<p><big>Here are some frequently asked questions posed by people not yet familiar with DARKROOM. If you currently own any DARKROOM edition, many training topics, how-to’s, and profitability tips are described in detail in the Tips & Tricks section of this website.</big></p>
-<p>If you find, after reviewing these preliminary answers you still have questions about a DARKROOM purchase feel free to email or call us at 800-517-4522.</p>
-<div class="faq">
-	<div class="question">
-		<h3>I have a MAC. Can I use DARKROOM?</h3>
-	</div>
-	<div class="answer">
-		<p>DARKROOM was built for a Windows environment. To run DARKROOM on your Mac, you'll have to install Windows. You can run Windows "virtually" using Parallels software (approximately $80) or with VM Ware Fusion (also approximately $80 and they offer a 30-day free trial). You can also use Apple Boot Camp to run Windows non-virtually on your Intel-based Mac.
-	</p></div>
+<div id="faqs-icon">
+	<img src="wp-content/uploads/2011/10/qa.png" />
 </div>
-<div class="faq">
-	<div class="question">
-		<h3>I have Windows 7. Will DARKROOM function properly?</h3>
+<div id="faqs">
+	<p><big>Here are some frequently asked questions posed by people not yet familiar with Darkroom.</big></p>
+	<p>If you find, after reviewing these preliminary answers you still have questions about a Darkroom purchase feel free to email or call us at 800-517-4522.</p>
+	<div class="faq">
+		<div class="question">
+			<h3>I have a MAC. Can I use Darkroom?</h3>
+		</div>
+		<div class="answer">
+			<p>Darkroom was built for a Windows environment. To run Darkroom on your Mac, you'll have to install Windows. You can run Windows &quot;virtually&quot; using Parallels software (approximately $80) or with VM Ware Fusion (also approximately $80 and they offer a 30-day free trial). You can also use Apple Boot Camp to run Windows non-virtually on your Intel-based Mac.
+		</p></div>
 	</div>
-	<div class="answer">
-		<p>Yes. If you have an older version of DARKROOM, you may need to update your Dongle / Key drivers here. Older versions of DARKROOM work better if you turn off Windows UAC (user access control). DARKROOM Version 9.1 has been tested and evaluated to work without issue with Windows 7.</p>
+	<div class="faq">
+		<div class="question">
+			<h3>I have Windows 7. Will Darkroom function properly?</h3>
+		</div>
+		<div class="answer">
+			<p>Yes. If you have an older version of Darkroom, you may need to update your Dongle / Key drivers here. Older versions of Darkroom work better if you turn off Windows UAC (user access control). Darkroom Version 9.1 has been tested and evaluated to work without issue with Windows 7.</p>
+		</div>
 	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>I am using DARKROOM on a 64-bit PC and I am getting an error.</h3>
+	<div class="faq">
+		<div class="question">
+			<h3>I am using Darkroom on a 64-bit PC and I am getting an error.</h3>
+		</div>
+		<div class="answer">
+			<p>Older security keys, also known as “dongles,” that come with your Darkroom purchase were originally built for 32-bit computers. There is a solution for this! All you need to do is download an update for this driver.</p>
+			<p>Click here to go to the security key’s manufacturer website, Safenet. At the top of the page you will see a sentence under the header Sentinal Drivers that says, “Click here for the latest Sentinel Driver.” Click that link, allow the download and you should not have any further issue.</p>
+		</div>
 	</div>
-	<div class="answer">
-		<p>Older security keys, also known as “dongles,” that come with your DARKROOM purchase were originally built for 32-bit computers. There is a solution for this! All you need to do is download an update for this driver.</p>
-		<p>Click here to go to the security key’s manufacturer website, Safenet. At the top of the page you will see a sentence under the header Sentinal Drivers that says, “Click here for the latest Sentinel Driver.” Click that link, allow the download and you should not have any further issue.</p>
+	<div class="faq">
+		<div class="question">
+			<h3>Does Darkroom support my camera and/or printer?</h3>
+		</div>
+		<div class="answer">
+			<p>We keep an elaborate list of supported cameras and printers that can be found here. As you will see, Darkroom has been built with the most relevant and popular professional equipment in mind. Furthermore, Darkroom will import the following file formats, so rest assured, you’re covered:
+				<ul>
+					<li>All standard image file formats like .tif, .bmp, .jpg, .tga, .psd, and .png</li>
+					<li>.mif (MegaVision raw files)</li>
+					<li>.crw (Canon raw format, also .raw or .tif)</li>
+					<li>.nef (Nikon raw format)</li>
+					<li>.dcr (Kodak professional file format)</li>
+					<li>.pcd (Kodak PhotoCD)</li>
+					<li>.pcx (Zsoft)</li>
+					<li>.fpx (Flashpix)</li>
+					<li>.tiff (Kodak proprietary tif)</li>
+				</ul>
+			</p>
+		</div>
 	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Does DARKROOM support my camera and/or printer?</h3>
+	<div class="faq">
+		<div class="question">
+			<h3>Do I need to purchase camera or printer software too?</h3>
+		</div>
+		<div class="answer">
+			<p>Nope. The beauty of Darkroom is that it saves you money because you will not have to purchase supporting software and drivers from your printer and camera manufacturers. If your hardware is listed here and you own Darkroom you will not need to buy anything else -- if you so choose. (With one exception, many camera manufacturers now require you purchase additional hardware to drop images directly into a computer's hot folder or to use WiFi capabilities. If your camera is listed on our supported hardware page you do not need additional hardware; but if your camera is not listed you may need to see if the camera manufacterer supplies hot folder capability. If it does, you're in luck, with that additional equipment or software, your Darkroom software will be able to collect your images wirelessly just as if it was on our list. We're pretty excited about this, by the way.)</p>
+		</div>
 	</div>
-	<div class="answer">
-		<p>We keep an elaborate list of supported cameras and printers that can be found here. As you will see, DARKROOM has been built with the most relevant and popular professional equipment in mind. Furthermore, DARKROOM will import the following file formats, so rest assured, you’re covered:
-			<ul>
-				<li>All standard image file formats like .tif, .bmp, .jpg, .tga, .psd, and .png</li>
-				<li>.mif (MegaVision raw files)</li>
-				<li>.crw (Canon raw format, also .raw or .tif)</li>
-				<li>.nef (Nikon raw format)</li>
-				<li>.dcr (Kodak professional file format)</li>
-				<li>.pcd (Kodak PhotoCD)</li>
-				<li>.pcx (Zsoft)</li>
-				<li>.fpx (Flashpix)</li>
-				<li>.tiff (Kodak proprietary tif)</li>
-			</ul>
-		</p>
+	<div class="faq">
+		<div class="question">
+			<h3>What is the security key? Why can't I download a Darkroom purchase right now?</h3>
+		</div>
+		<div class="answer">
+			<p>Darkroom requires a software protection key in order to function. Darkroom will load Evaluation Mode if the software key is not connected properly (in a USB slot). Evaluation Mode does not permit printing and will watermark the images you import into the software. When you purchase Darkroom directly from us or from an authorized dealer, the latest version of the software and the key (also called a “dongle”) will be shipped to you. If you are in a rush, know that most dealers offer overnight shipping.</p>
+		</div>
 	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Do I need to purchase camera or printer software too?</h3>
+	<div class="faq">
+		<div class="question">
+			<h3>What version of Darkroom do I have?</h3>
+		</div>
+		<div class="answer">
+			<p>Open your software. Click the [ ? ] icon in the top right hand corner. A pop up will tell you at the very top what version of the software you are currently operating.</p>
+		</div>
 	</div>
-	<div class="answer">
-		<p>Nope. The beauty of DARKROOM is that it saves you money because you will not have to purchase supporting software and drivers from your printer and camera manufacturers. If your hardware is listed here and you own DARKROOM you will not need to buy anything else -- if you so choose. (With one exception, many camera manufacturers now require you purchase additional hardware to drop images directly into a computer's hot folder or to use WiFi capabilities. If your camera is listed on our supported hardware page you do not need additional hardware; but if your camera is not listed you may need to see if the camera manufacterer supplies hot folder capability. If it does, you're in luck, with that additional equipment or software, your DARKROOM software will be able to collect your images wirelessly just as if it was on our list. We're pretty excited about this, by the way.)</p>
+	<div class="faq">
+		<div class="question">
+			<h3>Why should I get an upgrade?</h3>
+		</div>
+		<div class="answer">
+			<p>Currently, all Darkroom Editions are operating version 9.1. There are free updates for both Pro, Core and Assembly versions of 9.1 and newer here (if you currently own that version and you are simply seeking an update). If you are operating a version 8.9 or older, an upgrade to version 9.1 is likely what you are looking for.</p>
+			<p>If you are operating a version of Darkroom that is 8.9, 8.8, 8.7 or older, you are missing out on a lot of features. So much so, that you need a new software key to operate functions developed in the past four years.</p>
+			<p>If you would like to purchase or learn more about a software upgrade visit this webpage or contact us.</p>
+			<p>Since version 8.8, Darkroom has built-in these new feature additions:
+				<ul>
+					<li>New instant e-mail this photo feature for POS and presentations</li>
+					<li>Choice between two industry leading greenscreen tools</li>
+					<li>Download fresh product templates directly through the software with Template Marketplace</li>
+					<li>More tools for advanced and basic custom template creation</li>
+					<li>Online publishing automation so you can continue to work and update online events at the same time</li>
+					<li>Enhanced push-button connectivity to Labtricity Labs within the software</li>
+					<li>Change text and borders in Photo Workshop directly, versus altering the template</li>
+					<li>Join the digital revolution with Digital Delivery and Digital Download features</li>
+					<li>New drivers and built-in configurations for the latest printers and cameras</li>
+					<li>Significantly improved photo enhancement tools including a new &quot;healing&quot; brush (for Pro Edition)</li>
+				</ul>
+			</p>
+		</div>
 	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>What is the security key? Why can't I download a DARKROOM purchase right now?</h3>
+	<div class="faq">
+		<div class="question">
+			<h3>Which updates and upgrades do I get for free?</h3>
+		</div>
+		<div class="answer">
+			<p>If you have a current Maintenance Support Plan at the time of a new release launch you are entitled to free version upgrades. Note, however, Maintenance Support Plans are no longer available for new purchase.</p>
+			<p>In addition, you are entitled to any update made available to the edition you own. So, for example, you own a Version 8.9 of Darkroom, you are entitled to the latest release of that version 8.91.1678. Simply contact us prepared to provide your registration or serial number and we will supply you with the download you are seeking.</p>
+			<p>All of the most recent versions of the software are available for download on this page. If you do not have a security key for that particular Version the software will load in Evaluation Mode and not function properly. In this situation, you are seeking to upgrade your Darkroom software. Click here to learn about your upgrade options.</p>
+		</div>
 	</div>
-	<div class="answer">
-		<p>DARKROOM requires a software protection key in order to function. DARKROOM will load Evaluation Mode if the software key is not connected properly (in a USB slot). Evaluation Mode does not permit printing and will watermark the images you import into the software. When you purchase DARKROOM directly from us or from an authorized dealer, the latest version of the software and the key (also called a “dongle”) will be shipped to you. If you are in a rush, know that most dealers offer overnight shipping.</p>
+	<div class="faq">
+		<div class="question">
+			<h3>Do I need support?</h3>
+		</div>
+		<div class="answer">
+			<p>We like to think that Darkroom is intuitive and easy to work with, but we have found the more you do with Darkroom combined with the less time you have to figure it out on your own, the more you need access to support. Darkroom is pretty powerful software and your time is money, which is why there are some support options for you to consider before making a Darkroom purchase.</p>
+		</div>
 	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>What version of DARKROOM do I have?</h3>
+	<div class="faq">
+		<div class="question">
+			<h3>What are the support plan options?</h3>
+		</div>
+		<div class="answer">
+			<p>There are four support options to help you work with any Darkroom feature and configuration:
+				<ul>
+					<li>There are online training videos, manuals, tips and tricks published throughout this website that can be found by clicking here.
+					</li><li>Email Support is absolutely free. By emailing us at <a href="mailto:support@darkroomsoftware.com">support@darkroomsoftware.com</a>, we will respond to your query within 24 normal business hours and will maintain email contact with you until your issues and concerns are resolved.</li>
+					<li>Per-Incident Support costs $50 (£50 GBP). You call our U.S. or U.K. number during normal business hours and we will evaluate your issue as necessary. You will be charged over the phone via credit card.</li>
+					<li>Annual / Enterprise Support is a way to create an annual support contract for your organization or if you are seeking a discount to volume support calls. Click here to learn more about this service.</li>
+				</ul>
+			</p>
+			<p><a href="../../support">Click here</a> to learn more about all Darkroom support plans.</p>
+		</div>
 	</div>
-	<div class="answer">
-		<p>Open your software. Click the [ ? ] icon in the top right hand corner. A pop up will tell you at the very top what version of the software you are currently operating.</p>
+	<div class="faq">
+		<div class="question">
+			<h3>Can I see what Darkroom can do before I purchase?</h3>
+		</div>
+		<div class="answer">
+			<p>Certainly! <a href="../../learn/try-for-free">Click here</a>.</p>
+		</div>
 	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Why should I get an upgrade?</h3>
+	<div class="faq">
+		<div class="question">
+			<h3>Whatever happened to Web edition?</h3>
+		</div>
+		<div class="answer">
+			<p>Web edition was built as part of an agreement with PhotoReflect.com to develop a robust online publisher that also had some workflow tools. As of March 1, 2010, the engineers at Darkroom and the people with PhotoReflect built an entirely new publisher that is completely owned and managed by PhotoReflect. Also as of this time, Web edition was discontinued. If you love Web edition, know you will love Core and Professional editions even more (and all of your libraries and data will transfer over without issue) if you choose to upgrade to those editions.</p>
+		</div>
 	</div>
-	<div class="answer">
-		<p>Currently, all DARKROOM Editions are operating version 9.1. There are free updates for both Pro, Core and Assembly versions of 9.1 and newer here (if you currently own that version and you are simply seeking an update). If you are operating a version 8.9 or older, an upgrade to version 9.1 is likely what you are looking for.</p>
-		<p>If you are operating a version of DARKROOM that is 8.9, 8.8, 8.7 or older, you are missing out on a lot of features. So much so, that you need a new software key to operate functions developed in the past four years.</p>
-		<p>If you would like to purchase or learn more about a software upgrade visit this webpage or contact us.</p>
-		<p>Since version 8.8, DARKROOM has built-in these new feature additions:
-			<ul>
-				<li>New instant e-mail this photo feature for POS and presentations</li>
-				<li>Choice between two industry leading greenscreen tools</li>
-				<li>Download fresh product templates directly through the software with Template Marketplace</li>
-				<li>More tools for advanced and basic custom template creation</li>
-				<li>Online publishing automation so you can continue to work and update online events at the same time</li>
-				<li>Enhanced push-button connectivity to Labtricity Labs within the software</li>
-				<li>Change text and borders in Photo Workshop directly, versus altering the template</li>
-				<li>Join the digital revolution with Digital Delivery and Digital Download features</li>
-				<li>New drivers and built-in configurations for the latest printers and cameras</li>
-				<li>Significantly improved photo enhancement tools including a new “healing” brush (for Pro Edition)</li>
-			</ul>
-		</p>
+	<div class="faq">
+		<div class="question">
+			<h3>Do I need to set-up Darkroom in a particular way before I use it?</h3>
+		</div>
+		<div class="answer">
+			<p>Yes. For any edition of Darkroom you need to set it up properly to get started. You can download the Quick Start Manual pdf, watch the Get Started Video, or consider purchasing phone support. Note that our support personnel will not provide Darkroom training but most, if not all, of our dealers do.</p>
+		</div>
 	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Which updates and upgrades do I get for free?</h3>
+	<div class="faq">
+		<div class="question">
+			<h3>I downloaded a trial version of Core and/or Pro Edition but I can't do much.</h3>
+		</div>
+		<div class="answer">
+			<p>The trial versions will let you import your images but will be scanned with an ExpressDigital watermark. Pre-installed images and catalogs will not have this watermark. The reason we did this was so you can see everything you can do and take your time, since there is no time limit to use these downloads.</p>
+			In addition, you will not be able to connect your printer or camera drivers in evaluation mode. Nor will you be able to save any templates and borders you create in this mode. Beyond those limitations, you are able to enjoy the features of Darkroom in order for you to determine which product is right for you.
+		</div>
 	</div>
-	<div class="answer">
-		<p>If you have a current Maintenance Support Plan at the time of a new release launch you are entitled to free version upgrades. Note, however, Maintenance Support Plans are no longer available for new purchase.</p>
-		<p>In addition, you are entitled to any update made available to the edition you own. So, for example, you own a Version 8.9 of DARKROOM, you are entitled to the latest release of that version 8.91.1678. Simply contact us prepared to provide your registration or serial number and we will supply you with the download you are seeking.</p>
-		<p>All of the most recent versions of the software are available for download on this page. If you do not have a security key for that particular Version the software will load in Evaluation Mode and not function properly. In this situation, you are seeking to upgrade your DARKROOM software. Click here to learn about your upgrade options.</p>
+	<div class="faq">
+		<div class="question">
+			<h3>Is Darkroom going to be at any of the upcoming tradeshows?</h3>
+		</div>
+		<div class="answer">
+			<p>Darkroom Software, LLC attends tradeshows frequently. Sometimes we exhibit and sometimes we are simply there to support our dealers and partners. If you are attending a tradeshow you should first check the Exhibitor List to see if Darkroom is exhibiting. If not, compare the Exhibitor list to our dealer list to see if they are. If so, they are likely offering a special Darkroom promotion.</p>
+			<p>In addition we announce our travel plans in our monthly newsletter.</p>
+		</div>
 	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Do I need support?</h3>
+	<div class="faq">
+		<div class="question">
+			<h3>Is there someone that can demonstrate Darkroom near me?</h3>
+		</div>
+		<div class="answer">
+			<p>Darkroom Dealers are all very well versed in features or functionality. The fact is they are a very select group of companies that we have negotiated specials, trainings and events with. You should review our Dealer List and find the one nearest you. Not only would they be happy to demonstrate Darkroom for you in person, most will promote an event or workshop that will be of service to you.</p>
+			<p>If the nearest dealer happens to be too far away for in-person attention, please also feel free to contact us. We can either set up an online, personal, webinar to discuss Darkroom with you or ask one of our specialized dealers to do so.</p>
+		</div>
 	</div>
-	<div class="answer">
-		<p>We like to think that DARKROOM is intuitive and easy to work with, but we have found the more you do with DARKROOM combined with the less time you have to figure it out on your own, the more you need access to support. DARKROOM is pretty powerful software and your time is money, which is why there are some support options for you to consider before making a DARKROOM purchase.</p>
+	<div class="faq">
+		<div class="question">
+			<h3>Do I know anyone that uses Darkroom?</h3>
+		</div>
+		<div class="answer">
+			<p>A recent Professional Photographers of America (PPA) study indicates that 1 in 3 professional photographers use a version of Darkroom to solve problems and help them make more money. We cannot list all of our fans here, but we are pretty sure if you ask around you'll already know someone that uses Darkroom.</p>
+		</div>
 	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>What are the support plan options?</h3>
+	<div class="faq">
+		<div class="question">
+			<h3>Can darkroom send directly to Facebook?</h3>
+		</div>
+		<div class="answer">
+			<p>Yes. Version 9.1 will send directly to Facebook. Click here for a video on how to do that.</p>
+		</div>
 	</div>
-	<div class="answer">
-		<p>There are four support options to help you work with any DARKROOM feature and configuration:
-			<ul>
-				<li>There are online training videos, manuals, tips and tricks published throughout this website that can be found by clicking here.
-				</li><li>Email Support is absolutely free. By emailing us at support@darkroomsoftware.com, we will respond to your query within 24 normal business hours and will maintain email contact with you until your issues and concerns are resolved.</li>
-				<li>Per-Incident Support costs $50 (£50 GBP). You call our U.S. or U.K. number during normal business hours and we will evaluate your issue as necessary. You will be charged over the phone via credit card.</li>
-				<li>Annual / Enterprise Support is a way to create an annual support contract for your organization or if you are seeking a discount to volume support calls. Click here to learn more about this service.</li>
-			</ul>
-		</p>
-		<p>Click here to learn more about all DARKROOM support plans.</p>
-		<p>TRYING IT OUT Questions</p>
-	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Can I see what DARKROOM can do before I purchase?</h3>
-	</div>
-	<div class="answer">
-		<p>Certainly. Click here.</p>
-	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Whatever happened to Web edition?</h3>
-	</div>
-	<div class="answer">
-		<p>Web edition was built as part of an agreement with PhotoReflect.com to develop a robust online publisher that also had some workflow tools. As of March 1, 2010, the engineers at DARKROOM and the people with PhotoReflect built an entirely new publisher that is completely owned and managed by PhotoReflect. Also as of this time, Web edition was discontinued. If you love Web edition, know you will love Core and Professional editions even more (and all of your libraries and data will transfer over without issue) if you choose to upgrade to those editions.</p>
-	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Do I need to set-up DARKROOM in a particular way before I use it?</h3>
-	</div>
-	<div class="answer">
-		<p>Yes. For any edition of DARKROOM you need to set it up properly to get started. You can download the Quick Start Manual pdf, watch the Get Started Video, or consider purchasing phone support. Note that our support personnel will not provide DARKROOM training but most, if not all, of our dealers do.</p>
-	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>I downloaded a trial version of Core and/or Pro Edition but I can't do much.</h3>
-	</div>
-	<div class="answer">
-		<p>The trial versions will let you import your images but will be scanned with an ExpressDigital watermark. Pre-installed images and catalogs will not have this watermark. The reason we did this was so you can see everything you can do and take your time, since there is no time limit to use these downloads.</p>
-		In addition, you will not be able to connect your printer or camera drivers in evaluation mode. Nor will you be able to save any templates and borders you create in this mode. Beyond those limitations, you are able to enjoy the features of DARKROOM in order for you to determine which product is right for you.
-	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Is DARKROOM going to be at any of the upcoming tradeshows?</h3>
-	</div>
-	<div class="answer">
-		<p>Darkroom Software, LLC attends tradeshows frequently. Sometimes we exhibit and sometimes we are simply there to support our dealers and partners. If you are attending a tradeshow you should first check the Exhibitor List to see if DARKROOM is exhibiting. If not, compare the Exhibitor list to our dealer list to see if they are. If so, they are likely offering a special DARKROOM promotion.</p>
-		<p>In addition we announce our travel plans in our monthly newsletter.</p>
-	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Is there someone that can demonstrate DARKROOM near me?</h3>
-	</div>
-	<div class="answer">
-		<p>DARKROOM Dealers are all very well versed in features or functionality. The fact is they are a very select group of companies that we have negotiated specials, trainings and events with. You should review our Dealer List and find the one nearest you. Not only would they be happy to demonstrate DARKROOM for you in person, most will promote an event or workshop that will be of service to you.</p>
-		<p>If the nearest dealer happens to be too far away for in-person attention, please also feel free to contact us. We can either set up an online, personal, webinar to discuss DARKROOM with you or ask one of our specialized dealers to do so.</p>
-	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Do I know anyone that uses DARKROOM?</h3>
-	</div>
-	<div class="answer">
-		<p>A recent Professional Photographers of America (PPA) study indicates that 1 in 3 professional photographers use a version of DARKROOM to solve problems and help them make more money. We cannot list all of our fans here, but we are pretty sure if you ask around you'll already know someone that uses DARKROOM.</p>
-	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>Can darkroom send directly to Facebook?</h3>
-	</div>
-	<div class="answer">
-		<p>Yes!  Version 9.1 will send directly to Facebook.  Click here for a video on how to do that.</p>
-	</div>
-</div>
-<div class="faq">
-	<div class="question">
-		<h3>I can’t decide if I should get Core or Pro.  Can you explain the differences in a couple of sentences?</h3>
-	</div>
-	<div class="answer">
-		<p>Yes! Core and Pro are very similar, but Pro offers Networking capabilities (Pro acts as the Server while Core is used for Clients).  Pro also offers direct printer drivers (Click here for a list).  This makes printing faster and easier (especially to Mini Labs and Large Format Printers).  Please note that Core WILL print to any printer with a Windows printer driver.</p>
+	<div class="faq">
+		<div class="question">
+			<h3>I can’t decide if I should get Core or Pro. Can you explain the differences in a couple of sentences?</h3>
+		</div>
+		<div class="answer">
+			<p>Yes! Core and Pro are very similar, but Pro offers Networking capabilities (Pro acts as the Server while Core is used for Clients). Pro also offers direct printer drivers (Click here for a list). This makes printing faster and easier (especially to Mini Labs and Large Format Printers). Please note that Core will print to any printer with a Windows printer driver.</p>
+		</div>
 	</div>
 </div>
